@@ -1,12 +1,13 @@
 import numpy as np
 import pickle
+from artifacts.config import MODEL_PATH
 
 class icp():
     def __init__(self,data):
         self.data = data
 
     def load_model(self):
-        with open(r'C:\Users\khand\Desktop\Project\IRIS\artifacts\model.pkl','rb') as file:
+        with open(MODEL_PATH,'rb') as file:
             self.model= pickle.load(file)     
 
 
